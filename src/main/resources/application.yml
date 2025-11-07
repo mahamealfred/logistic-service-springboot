@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: logistics-app
+  profiles:
+    active: dev
+  jackson:
+    time-zone: UTC
+    date-format: yyyy-MM-dd HH:mm:ss
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+logging:
+  level:
+    com.logistics: DEBUG
+    org.springframework.security: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:mySuperSecretKeyThatIsVeryLongAndSecureForJWTTokenGeneration123!}
+    expiration: 86400000
+  cors:
+    allowed-origins: ${ALLOWED_ORIGINS:http://localhost:3000}
