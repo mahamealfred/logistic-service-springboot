@@ -1,6 +1,6 @@
 package com.code_with_alfred.logistics_company.logistics.dto.request;
 
-import com.logistics.entity.ShipmentStatus;
+import com.code_with_alfred.logistics_company.logistics.entity.ShipmentStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
